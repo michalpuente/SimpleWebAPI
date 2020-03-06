@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "1457f7fc-eae3-4508-9c72-4ae82a574ce1",
+		"name": "SimpleWebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/getlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/getproductbyid/f581f31f-d736-4b50-8a6d-30d5d9a9bc74?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getproductbyid",
+						"f581f31f-d736-4b50-8a6d-30d5d9a9bc74"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/removeproduct/f581f31f-d736-4b50-8a6d-30d5d9a9bc74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"removeproduct",
+						"f581f31f-d736-4b50-8a6d-30d5d9a9bc74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"testowy produkt 4\",\r\n        \"price\": 193.88\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/createproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"4ec7f002-aafb-4e74-859d-949262994109\",\r\n        \"name\": \"nowa nazwa test 2\",\r\n        \"price\": 10582.82\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/updateproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateproduct"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
