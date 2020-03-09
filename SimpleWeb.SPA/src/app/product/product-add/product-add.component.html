@@ -1,0 +1,20 @@
+<form #createForm="ngForm" id="createForm" (ngSubmit)="createProduct()">
+  <div product=[product] class="form-group p-5">
+    <div class="p-2">
+    </div>
+    <div class="p-2">
+      <strong>Name</strong><br/>
+      <input type="text" maxlength="100" [(ngModel)]="product.name" name="Name"/>
+    </div>
+    <div class="p-2">
+      <strong>Price</strong><br/>
+      <input type="number" [(ngModel)]="product.price" name="Price"/>
+    </div>    
+    <div class="p-2">
+      <input class="btn btn-primary" type="submit" value="Create product">
+    </div>
+    <div class="p-2">
+      <input routerLink="/getlist" routerLinkActive="active" class="btn btn-secondary" type="button" value="Back">
+    </div>
+  </div>
+</form>

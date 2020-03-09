@@ -1,0 +1,27 @@
+<form #editForm="ngForm" id="editForm" (ngSubmit)="updateProduct()">
+  <div class="col-sm-8 p-2">
+    <div *ngIf="editForm.dirty" class="alert alert-info">
+      <p><strong>Information:</strong> You have made changes. Any unsaved changes will be lost!</p>
+    </div>
+  </div>
+  <div product=[product] class="form-group p-5">
+    <div class="p-2">
+      <strong>Id</strong><br/>
+      <label>{{product.id}}</label>
+    </div>
+    <div class="p-2">
+      <strong>Name</strong><br/>
+      <input type="text" maxlength="100" [(ngModel)]="product.name" name="Name"/>
+    </div>
+    <div class="p-2">
+      <strong>Price</strong><br/>
+      <input type="number" [(ngModel)]="product.price" name="Price"/>
+    </div>    
+    <div class="p-2">
+      <input class="btn btn-primary" type="submit" value="Update product">
+    </div>
+    <div class="p-2">
+      <input routerLink="/getlist" routerLinkActive="active" class="btn btn-secondary" type="button" value="Back">
+    </div>
+  </div>
+</form>
